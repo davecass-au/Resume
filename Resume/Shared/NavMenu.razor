@@ -1,0 +1,49 @@
+﻿@implements IDisposable
+
+@inject MenuItems menuItems
+
+<div class="top-row ps-3 navbar navbar-dark">    
+    <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavBar">
+        <span class=@NavBarToggleIcon></span>
+    </button>      
+</div>
+
+<div>
+    <nav class="flex-column">
+        @foreach (var item in menuItems.Items)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href=@item.Href Match="NavLinkMatch.All">
+                    <i class=@item.IconClass ></i>                    
+                    @if (!Options.NavBarCollapsed)
+                    {
+                        @item.Title
+                    }
+                </NavLink>
+            </div>
+        }      
+    </nav>
+</div>
+
+@code {
+    [Inject]
+    protected UserOptions Options { get; set; } = default!;
+
+    private void ToggleNavBar()
+    {
+        Options.ToggleNavBar();
+    }
+
+    protected override void OnInitialized()
+    {
+        Options.OnNavBarStateChange += StateHasChanged;
+    }
+
+    void IDisposable.Dispose()
+    {
+      Options.OnNavBarStateChange -= StateHasChanged;
+    }
+
+    private string NavBarToggleIcon => Options.NavBarCollapsed ? "oi oi-chevron-right" : "oi oi-chevron-left";
+
+}

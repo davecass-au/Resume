@@ -1,0 +1,18 @@
+﻿@page "/"
+
+@inject DataService Data
+
+<MainPageRender PageTitle="Summary">
+    <div class="summary">
+        @Data.Resume.Summary
+    </div>    
+</MainPageRender>
+
+@code{
+    protected override async Task OnInitializedAsync()
+    {
+        // TODO: Should not be loaded here. Maybe a loading page so can reload data on request. 
+        await Data.LoadDataAsync();
+    }
+}
+

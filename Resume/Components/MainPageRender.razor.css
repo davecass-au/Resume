@@ -1,0 +1,9 @@
+﻿body {
+}
+
+.page-body
+{
+    overflow: auto;
+    flex: 1;
+    border-style:groove;
+}

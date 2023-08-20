@@ -1,0 +1,42 @@
+﻿@implements IDisposable
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class=@SidebarCssClass>
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="main-content">
+            <div class="top-row px-4">
+                <div class="top-row-title">
+                    David Cass
+                </div>                
+            </div>
+        
+            <div class="page-content">                               
+                @Body                            
+            </div>
+        </div>        
+    </main>
+</div>
+
+@code {
+    [Inject]
+    protected UserOptions Options { get; set; } = default!;
+
+    public string PageTitle { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        Options.OnNavBarStateChange += StateHasChanged;
+    }
+
+    void IDisposable.Dispose()
+    {
+      Options.OnNavBarStateChange -= StateHasChanged;
+    }
+
+    private string? SidebarCssClass => Options.NavBarCollapsed ? "sidebar collapsed" : "sidebar expanded";
+}

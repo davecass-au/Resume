@@ -1,0 +1,18 @@
+﻿@page "/technicalskills"
+
+@inject DataService Data
+
+<MainPageRender PageTitle="Technical Skills">
+
+    <table class="table">        
+        <tbody>
+            @foreach (var skill in Data.Resume.Skills) {
+                <tr>
+                    <td class="header-row">@skill.Type.GetDescription()</td>
+                    <td>@DisplayHelpers.GetListForDisplay(skill.Details)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</MainPageRender>

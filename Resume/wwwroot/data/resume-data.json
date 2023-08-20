@@ -1,0 +1,142 @@
+﻿{
+  "summary": "Technical specialist with 8 years of experience in software development, data processing and visualisation. Highly skilled in requirement gathering, testing, development, integration, and data analysis. Tried and tested in diagnosing and resolving technical customer inquiries. Able to solve difficult problems and situations through use of troubleshooting, critical thinking, collaboration, and communication.",
+  "certifications": [
+    {
+      "year": 2023,
+      "title": "Build Web Apps with ASP.NET",
+      "location": "Codecademy",
+      "details": [ "C#", "ASP.NET", "Razor", "Entity Framework" ]
+    },
+    {
+      "year": 2018,
+      "title": "Software Development Fundamentals",
+      "location": "Microsoft Technology Associate",
+      "details": [ "C#", "HTML", "CSS", "JavaScript", "SQL", "application life cycle management" ]
+    }
+  ],
+  "education": [
+    {
+      "year": 2022,
+      "title": "Graduate Diploma",
+      "subtitle": "Data Science",
+      "location": "USQ",
+      "details": [ "Data Science & Visualisation", "Big Data Management", "Data Mining", "Big Data Analytics", "Machine Learning", "Business Intelligence", "ICT Project Management" ]
+    },
+    {
+      "year": 2014,
+      "title": "Graduate Certificate",
+      "subtitle": "Astronomy",
+      "location": "USQ",
+      "details": [ "Observational Astronomy", "Stellar Astronomy" ]
+    },
+    {
+      "year": 2013,
+      "title": "Bachelor of Science",
+      "subtitle": "Physical Science",
+      "location": "USQ",
+      "details": [ "Software Development Tools", "High Performance Numerical Computing", "Database Systems", "Data Analysis", "Algebra and Calculus", "Algorithms and Data Structures" ]
+    }
+  ],
+  "skills": [
+    {
+      "type": 1,
+      "details": [ "VB", "C#", "CSS", "HTML", "JavaScript", "React" ]
+    },
+    {
+      "type": 2,
+      "details": [ "R", "Python" ]
+    },
+    {
+      "type": 3,
+      "details": [ "ASP.NET", ".NET Core", "Blazor", "ServiceStack" ]
+    },
+    {
+      "type": 4,
+      "details": [ "SQL Server", "PostGreSQL", "MySQL", "InfluxDB", "OracleSQL" ]
+    },
+    {
+      "type": 5,
+      "details": [ "Microsoft Azure", "AWS", "Docker Hub", "Git Hub" ]
+    },
+    {
+      "type": 6,
+      "details": [ "Qlikview", "Tableau", "PowerBI", "Grafana" ]
+    },
+    {
+      "type": 7,
+      "details": [ "REST", "SOAP", "MQTT" ]
+    },
+    {
+      "type": 8,
+      "details": [ "Docker", "Kubernetes" ]
+    },
+    {
+      "type": 9,
+      "details": [ "Mulesoft", "Pentaho", "Telerik", "DevExpress" ]
+    },
+    {
+      "type": 10,
+      "details": [ "Confluence", "Azure DevOps", "JIRA", "Jupyter Notebooks" ]
+    }
+  ],
+  "workHistory": [
+    {
+      "title": "Software Engineer",
+      "location": "Vieb",
+      "fromdate": "2023-07",
+      "todate": "Current",
+      "details": [
+        "Developed web application features using ASP.Net and Microsoft Entity Framework.",
+        "Performed prompt data issue identification and resolution utilising advanced SQL queries.",
+        "Applied front end knowledge to improve user interface and user experience."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "location": "knowble",
+      "fromdate": "2022-11",
+      "todate": "2023-07",
+      "details": [
+        "Responsible for development and maintenance of Grafana Dashboards for visualisation, monitoring, and reporting on Air Quality and Weather data.",
+        "Introduced DevExpress framework and worked with team to integrate with existing React application to improve user experience.",
+        "Successfully developed the company’s first Blazor PWA solution to enable inspection and monitoring of critical Air Quality data from mobile devices.",
+        "Carried out Azure AD Application Registration configuration for OAuth2.0 support in Blazor PWA"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "location": "Klinge Holdings Pty Ltd",
+      "fromdate": "2021-01",
+      "todate": "2022-11",
+      "details": [
+        "Built and implemented a ServiceStack API solution allowing the extraction, consolidation, and delivery of data via custom built endpoints.",
+        "Designed and developed a Blazor dashboard for clients to visualise, monitor, and report on tyre usage via the consumption of data through the developed APIs.",
+        "Conducted demonstration sessions to potential clients as well as performing environment setup and training of new clients.",
+        "Assisted clients setting up PowerBI to consume and process API sourced data."
+      ]
+    },
+    {
+      "title": "IT Systems and Data Analyst",
+      "location": "JBS Australia",
+      "fromdate": "2018-09",
+      "todate": "2021-01",
+      "details": [
+        "Developed and implemented HR system integrations into the business requiring extensive data analysis, problem solving and innovative solutions.",
+        "Identified, developed, and deployed source control for integration projects leading to a reduction in tedious manual and error prone deployment tasks.",
+        "Replaced redundant applications with QlikView reports and visualisations while liaising with key stakeholders ensuring the meeting of requirements."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "location": "Digital Instinct, Kronos Inc.",
+      "fromdate": "2015-01",
+      "todate": "2018-09",
+      "details": [
+        "Developed application front end features such as forms, menus, and reports across a range of desktop, web, and mobile applications.",
+        "Participated in team AGILE scrum environment to ensure sprints completed on time using JIRA and Confluence for item assignment, tracking and documentation.",
+        "Conducted software releases using Sourcetree, Bitbucket and Bamboo."
+      ]
+    }
+  ]
+}
+

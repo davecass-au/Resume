@@ -1,0 +1,29 @@
+﻿@page "/education"
+
+@inject DataService Data
+
+<MainPageRender PageTitle="Education">    
+
+    <table class="table">        
+        <tbody>
+            @foreach (var education in Data.Resume.Education) {
+                <tr class="header-row">
+                    <td>@education.Title - @education.SubTitle</td>
+                    <td>@education.Location</td>
+                    <td>@education.Year</td>                    
+                </tr>
+                <tr class="details-row">
+                    <td colspan="3">
+                        @foreach (var detail in education.Details)
+                        {
+                            <li>@detail</li>
+                        }                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>   
+    
+</MainPageRender>
+
+

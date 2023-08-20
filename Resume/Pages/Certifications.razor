@@ -1,0 +1,22 @@
+﻿@page "/certifications"
+
+@inject DataService Data
+
+<MainPageRender PageTitle="Certifications">  
+
+    <table class="table">   
+        <tbody>
+            @foreach (var cert in Data.Resume.Certifications) {                
+                <tr class="header-row">                   
+                    <td>@cert.Title</td>
+                    <td>@cert.Location</td>
+                    <td>@cert.Year</td>                    
+                </tr>
+                <tr class="details-row">
+                    <td>@DisplayHelpers.GetListForDisplay(cert.Details)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</MainPageRender>

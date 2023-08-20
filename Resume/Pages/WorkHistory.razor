@@ -1,0 +1,29 @@
+﻿@page "/workhistory"
+@inject DataService Data
+
+<MainPageRender PageTitle="Work History">
+
+    <table class="table">        
+        <tbody>
+            @foreach (var work in Data.Resume.WorkHistory) {
+                <tr class="header-row">
+                    <td>@work.Title</td>
+                    <td>@work.Location</td>
+                    <td>@work.FromDate</td>
+                    <td>@work.ToDate</td>                    
+                </tr>
+                <tr class="details-row">
+                    <td colspan="4">
+                        <ul>
+                            @foreach (var detail in work.Details)
+                            {
+                                <li>@detail</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</MainPageRender>
