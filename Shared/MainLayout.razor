@@ -2,25 +2,30 @@
 
 @inherits LayoutComponentBase
 
-<div class="page">
-    <div class=@SidebarCssClass>
-        <NavMenu />
-    </div>
+<main>
+    <div class="main-content">
+        <div class="top-row px-4">
+                
+                <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavBar">
+                    <span class=@NavBarToggleIcon></span>
+                </button>  
+                
+            <div class="top-row-title">
+                David Cass
+            </div>                
+        </div>
 
-    <main>
-        <div class="main-content">
-            <div class="top-row px-4">
-                <div class="top-row-title">
-                    David Cass
-                </div>                
+        <div class="page">
+            <div class=@SidebarCssClass>
+                <NavMenu />
             </div>
-        
             <div class="page-content">                               
                 @Body                            
             </div>
-        </div>        
-    </main>
-</div>
+        </div>
+        
+    </div>        
+</main>
 
 @code {
     [Inject]
@@ -38,5 +43,14 @@
       Options.OnNavBarStateChange -= StateHasChanged;
     }
 
+
+    private void ToggleNavBar()
+    {
+        Options.ToggleNavBar();
+    }
+
+
+
+    private string NavBarToggleIcon => Options.NavBarCollapsed ? "oi oi-chevron-right" : "oi oi-chevron-left";
     private string? SidebarCssClass => Options.NavBarCollapsed ? "sidebar collapsed" : "sidebar expanded";
 }
